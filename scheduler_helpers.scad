@@ -93,8 +93,8 @@ module dma_marker(time){
     basic_marker(time, "black", 50, [2.5, 2.5, 5]);
 }
 
-module label_time(time, label = "", fontsize = 4){
-    basic_marker(time, "grey", 60, [2.5, 0, 5], label, fontsize);
+module timestamp(time, fontsize = 2){
+    basic_marker(time, "grey", 60, [1, 0, 5], label=str(time), fontsize=fontsize);
 }
 
 // Marks the location of the cores text on the left

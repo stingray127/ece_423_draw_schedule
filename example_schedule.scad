@@ -21,7 +21,7 @@ starts_at(i1_idct_done, CC, Core_3, "yellow");
 
 i1_cc_done = i1_idct_done + CC;
 
-label_time(i1_cc_done, "testing");
+timestamp(i1_cc_done);
 
 whereami(i1_sdr_done);
 
