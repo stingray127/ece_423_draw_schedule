@@ -1,10 +1,23 @@
 // Event Options
 SDR_P = 2.918;
 SDR_I = 5.452;
-LD_P = 24.344;
-LD_I = 158.491;
+
+LD_Y_P = 13.654;
+LD_Cr_P = 5.345;
+LD_Cb_P = 5.345;
+LD_All_P = LD_Y_P + LD_Cr_P + LD_Cb_P;
+
+LD_Y_I = 69.548;
+LD_Cr_I = 45.336;
+LD_Cb_I = 43.607;
+LD_All_I = LD_Y_I + LD_Cr_I + LD_Cb_I;
+
 IDCT = 3.54;
 CC = 52;
+// Are these correct?
+// CC_Y = 52/3;
+// CC_Cr = 52/3;
+// CC_Cb = 52/3;
 
 // Core Options
 Core_IDCT = -70;

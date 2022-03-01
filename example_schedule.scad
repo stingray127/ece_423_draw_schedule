@@ -4,11 +4,11 @@ starts_at(0, SDR_I, Core_1, shade="lightblue", label="SDR", 5);
 
 i1_sdr_done = SDR_I;
 
-starts_at(i1_sdr_done, LD_I, Core_2, "green");
+starts_at(i1_sdr_done, LD_All_I, Core_2, "green");
 
-i1_ld_done = i1_sdr_done + LD_I;
+i1_ld_done = i1_sdr_done + LD_All_I;
 
-ends_at(i1_ld_done, LD_P, Core_1, label="testing");
+ends_at(i1_ld_done, LD_All_P, Core_1, label="testing");
 
 starts_at(i1_ld_done, IDCT, Core_IDCT, "orange");
 
