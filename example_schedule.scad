@@ -20,3 +20,7 @@ starts_at(i1_idct_done, CC, Core_3, "yellow");
 i1_cc_done = i1_idct_done + CC;
 
 marker(i1_cc_done);
+
+// Dumps the value of i1_cc_done into the Console window
+// > ECHO: 219.483
+echo(i1_cc_done);
