@@ -20,7 +20,7 @@ A hastily put together tool to draw ECE 423 schedules accurately in OpenSCAD
 - This tool was intended to work in 2D
   - Enable "Orthogonal View"
     - Bottom Bar, 4th icon from the right
-  - Click "Top" to make your view to 2D
+  - Click "Top" to make your view 2D
     - Bottom Bar, 9th icon from the left
 - Navigation Tips
   - Scroll in and out to zoom
