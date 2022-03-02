@@ -5,19 +5,15 @@ SDR_I = 5.452;
 LD_Y_P = 13.654;
 LD_Cr_P = 5.345;
 LD_Cb_P = 5.345;
-LD_All_P = LD_Y_P + LD_Cr_P + LD_Cb_P;
+LD_All_P = LD_Y_P + LD_Cr_P + LD_Cb_P; //24.344
 
 LD_Y_I = 69.548;
 LD_Cr_I = 45.336;
 LD_Cb_I = 43.607;
-LD_All_I = LD_Y_I + LD_Cr_I + LD_Cb_I;
+LD_All_I = LD_Y_I + LD_Cr_I + LD_Cb_I; //158.491
 
 IDCT = 3.54;
 CC = 52;
-// Are these correct?
-// CC_Y = 52/3;
-// CC_Cr = 52/3;
-// CC_Cb = 52/3;
 
 // Core Options
 Core_IDCT = -70;
@@ -28,7 +24,7 @@ Core_1 = Core_2+10;
 // Usage: Place the start time of the event type at the specified time
 // and draws a box that marks the duration of the event on a specified core.
 //
-// starts_at(0, SDR_I, Core_1, "blue");
+// starts_at(0, SDR_I, Core_1, shade="blue", label="SDR", fontsize=5);
 //      - start time is 0
 //      - event is SDR_I
 //      - core is Core_1
@@ -93,8 +89,14 @@ module dma_marker(time){
     basic_marker(time, "black", 50, [2.5, 2.5, 5]);
 }
 
+// Drops a marker at a specified time, and displays the time at a 45 degree angle
 module timestamp(time, fontsize = 2){
     basic_marker(time, "grey", 60, [1, 0, 5], label=str(time), fontsize=fontsize);
+}
+
+// Drops a marker at specified time, with input text at a 45 degree angle
+module note(time, label="", fontsize = 3){
+    basic_marker(time, "firebrick", 80, [2, 0, 5], label=label, fontsize=fontsize);
 }
 
 // Marks the location of the cores text on the left
