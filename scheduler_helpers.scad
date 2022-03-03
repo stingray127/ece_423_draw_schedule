@@ -90,13 +90,13 @@ module dma_marker(time){
 }
 
 // Drops a marker at a specified time, and displays the time at a 45 degree angle
-module timestamp(time, fontsize = 2){
-    basic_marker(time, "grey", 60, [1, 0, 5], label=str(time), fontsize=fontsize);
+module timestamp(time, shade="grey", fontsize = 2){
+    basic_marker(time, shade, 60, [1, 0, 5], label=str(time), fontsize=fontsize);
 }
 
 // Drops a marker at specified time, with input text at a 45 degree angle
-module note(time, label="", fontsize = 3){
-    basic_marker(time, "firebrick", 80, [2, 0, 5], label=label, fontsize=fontsize);
+module note(time, shade="firebrick", label="", fontsize = 3){
+    basic_marker(time, shade, 80, [2, 0, 5], label=label, fontsize=fontsize);
 }
 
 // Marks the location of the cores text on the left
